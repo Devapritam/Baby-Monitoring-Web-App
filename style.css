@@ -1,0 +1,72 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    background: url(background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-bottom: 300px;
+}
+
+.heading {
+    width: 90%;
+    padding: 20px;
+    font-size: 25px;
+    font-weight: bolder;
+    border: none;
+    display: block;
+    box-shadow: 0 0 20px 0 rgba(0 0 0 / 60%);
+    transition: all 0.3s;
+}
+
+.heading:hover {
+    transform: translateY(-5px);
+    background-color: #00d6e6;
+}
+
+#status {
+    font-size: 17px;
+    font-weight: bolder;
+    color: #fff;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
+    display: inline-block;
+    width: 30%;
+    padding: 8px 10px;
+    border: none;
+    transition: all 0.5s;
+}
+
+#status:hover {
+    transform: translateY(-5px);
+    background-color: #eb0606;
+}
+
+#objectsDetected {
+    font-size: 17px;
+    font-weight: bolder;
+    color: #fff;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
+    display: inline-block;
+    width: 30%;
+    padding: 8px 10px;
+    border: none;
+    transition: all 0.5s;
+}
+
+#objectsDetected:hover {
+    transform: translateY(-5px);
+    background-color: #eb7506;
+}
+
+canvas {
+    border: none;
+    box-shadow: 0 5px 20px #00d6e6;
+    margin-top: 70px;
+    border-radius: 15px;
+}
