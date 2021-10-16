@@ -50,27 +50,28 @@ function draw() {
             noFill();
             stroke(r, g, b);
             rect(objects[i].x, objects[i].y, objects[i].width, objects[i].height);
+
+            if(objects[i].label == "person") {
+                document.getElementById("objectsDetected").innerHTML = "Baby Found";
+                alertSound.stop();
+            }
+            
+            else {
+                document.getElementById("objectsDetected").innerHTML = "Baby Not Found";
+                alertSound.play();
+                setTimeout(() => {
+                    alertSound.stop();
+                }, 3000);
+            }
         }
 
-        if(objects[i].label == "person") {
-            document.getElementById("objectsDetected").innerHTML = "Baby Found";
-            alertSound.stop();
-        }
-
-        else if (objects.length <= 0) {
+        if (objects.length <= 0) {
             document.getElementById("objectsDetected").innerHTML = "Baby Not Found";
             alertSound.play();
             setTimeout(() => {
                 alertSound.stop();
             }, 3000);
         }
-        
-        else {
-            document.getElementById("objectsDetected").innerHTML = "Baby Not Found";
-            alertSound.play();
-            setTimeout(() => {
-                alertSound.stop();
-            }, 3000);
-        }
+
     }
 }
